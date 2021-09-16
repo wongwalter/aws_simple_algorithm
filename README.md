@@ -7,6 +7,10 @@ Although spot instances are very appealing, they come with some caveats: there i
 
 As an extra challenge, I would like to know if we can switch to other spot instances when one is going to expire. In that sense, I want to know which are the spot instances that can be good candidates to move to.
 
+As an example, we can see in the figure below the price variability of spot instances. Whenever there is a price change, your spot instance has a change to be evicted.
+
+![Price variability](https://github.com/wongwalter/aws_simple_algorithm/blob/main/reports/figures/plot_step_4_most_volatile_instances.png)
+
 Some companies such as [Spot](https://spot.io) leverages spot instances to reduce the costs of cloud usage (and they have been bought by NetApp).
 
 This first version contains the analytics of the AWS pricing data and the clustering of spot instances that have the same eviction pattern.
@@ -17,6 +21,7 @@ For this pet project, I used the following libraries:
 - Plotly: interactive 3D plots to see the distribution of clusters / instances;
 - papermill: data pipeline create. It allowed me to organize all jupyter notebooks in a data pipeline, making it possible to repeat the process consistently (inspired by this [Netflix article](https://netflixtechblog.com/notebook-innovation-591ee3221233).
 - cookiecutter: convention over configuration. This is important to have consistency across projects and this helped me to have a consistent project of all my data projects.
+
 
 Running the Project
 ------------
