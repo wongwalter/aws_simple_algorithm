@@ -1,7 +1,22 @@
-aws_simple_algorithm
+Project Description
 ==============================
 
-This projects shows the analytics to find out the minimum price update interval for AWS spot instances. With that, it is possible to predict when the next price update is going to happen , thus, just migrating before an instance fails. The result is better availability for instances and reduced costs when using AWS spot instances.
+This a data analytics / ML project that aims to understand the behavior of AWS spot instances. The relevance of this work is that spot instances cost a fraction of the on-demand ones, sometimes with discounts of 90%! Therefore, the business problem that we want to solve is to reduce the costs of cloud services.
+
+Although spot instances are very appealing, they come with some caveats: there is no availability guarantee, i.e., the spot instance can be interrupted and you lose the resource (this process is called eviction). Therefore, what we want to know is if there is a minimum period of time that we can use the spot instance without being interrupted. If so, we could use that resource at a fraction of the on-demand one.
+
+As an extra challenge, I would like to know if we can switch to other spot instances when one is going to expire. In that sense, I want to know which are the spot instances that can be good candidates to move to.
+
+Some companies such as [Spot](https://spot.io) leverages spot instances to reduce the costs of cloud usage (and they have been bought by NetApp).
+
+This first version contains the analytics of the AWS pricing data and the clustering of spot instances that have the same eviction pattern.
+
+For this pet project, I used the following libraries:
+- Pandas: nothing better than Pandas to do data wrangling =)
+- Matplotlib: quick plot of results for analysis;
+- Plotly: interactive 3D plots to see the distribution of clusters / instances;
+- papermill: data pipeline create. It allowed me to organize all jupyter notebooks in a data pipeline, making it possible to repeat the process consistently (inspired by this [Netflix article](https://netflixtechblog.com/notebook-innovation-591ee3221233).
+- cookiecutter: convention over configuration. This is important to have consistency across projects and this helped me to have a consistent project of all my data projects.
 
 Project Organization
 ------------
@@ -32,10 +47,7 @@ Project Organization
     │   ├── __init__.py    <- Makes src a Python module
     │   │
     │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    
-
+    │   │   
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
