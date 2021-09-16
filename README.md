@@ -1,7 +1,7 @@
 Project Description
 ==============================
 
-This a data analytics / ML project that aims to understand the behavior of AWS spot instances. The relevance of this work is that spot instances cost a fraction of the on-demand ones, sometimes with discounts of 90%! Therefore, the business problem that we want to solve is to reduce the costs of cloud services.
+This is a data analytics / ML project that aims to understand the behavior of AWS spot instances. The relevance of this work is that spot instances cost a fraction of the on-demand ones, sometimes with discounts of 90%! Therefore, the business problem that we want to solve is to reduce the costs of cloud services.
 
 Although spot instances are very appealing, they come with some caveats: there is no availability guarantee, i.e., the spot instance can be interrupted and you lose the resource (this process is called eviction). Therefore, what we want to know is if there is a minimum period of time that we can use the spot instance without being interrupted. If so, we could use that resource at a fraction of the on-demand one.
 
