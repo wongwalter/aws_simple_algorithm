@@ -18,6 +18,13 @@ For this pet project, I used the following libraries:
 - papermill: data pipeline create. It allowed me to organize all jupyter notebooks in a data pipeline, making it possible to repeat the process consistently (inspired by this [Netflix article](https://netflixtechblog.com/notebook-innovation-591ee3221233).
 - cookiecutter: convention over configuration. This is important to have consistency across projects and this helped me to have a consistent project of all my data projects.
 
+Running the Project
+------------
+
+1. Get to the notebooks folder, open `PM_main.ipynb`, and execute it. This will start the pipeline to generate all parsing, transformations, analytics and report generation.
+
+If you want, it is possible to run each notebook individually. They have local parameters that enables them to work in a standalone way.
+
 Project Organization
 ------------
 
