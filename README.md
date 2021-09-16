@@ -11,6 +11,10 @@ As an example, we can see in the figure below the price variability of spot inst
 
 ![Price variability](https://github.com/wongwalter/aws_simple_algorithm/blob/main/reports/figures/plot_step_4_most_volatile_instances.png)
 
+The result of applying ML k-means clustering is below. As we can see, there are instances that behave similarly and are strong candidates for migration. Check out the report folder for more information!
+
+![K-means clustering](https://github.com/wongwalter/aws_simple_algorithm/blob/main/reports/figures/plot_step_8_cluster_3d.png)
+
 Some companies such as [Spot](https://spot.io) leverages spot instances to reduce the costs of cloud usage (and they have been bought by NetApp).
 
 This first version contains the analytics of the AWS pricing data and the clustering of spot instances that have the same eviction pattern.
